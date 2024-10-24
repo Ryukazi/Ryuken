@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Ryuken" content="width=device-width, initial-scale=1.0">
+    <title>Sigma</title>
+    <style>
+        body {
+            margin: 5px;
+            padding: 8px;
+            height: 98vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-image: url('https://i.ibb.co/C5nXsyX/image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        h1, h2 {
+            color: red;
+            border: 2px solid black;
+            padding: 5px;
+        }
+
+        h1, h2, p, button {
+            margin: 10px 0;
+        }
+
+        #randomMessage {
+            font-size: 20px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Motivational Lines</h1>
+    <h2>Ryuken Bap</h2>
+    <p id="randomMessage">Motivational quotes</p>
+    <button onclick="generateMessage()">Generate Message</button>
+
+    <script>
+        function generateMessage() {
+            var messages = [
+                "If you're kind, forget that kindness and be a sigma.",
+                "If you lose hope, you'll be messed up.",
+                "Be a man 💪🏻 & strong.",
+                "Be strong and support yourself.",
+                "Never lose hope in your daily life 💗."
+            ];
+
+            var randomIndex = Math.floor(Math.random() * messages.length);
+            var randomMessage = messages[randomIndex];
+
+            var messageElement = document.getElementById("randomMessage");
+            messageElement.innerHTML = randomMessage;
+
+            var colors = ['red', 'blue', 'green', 'yellow', 'orange'];
+            var randomColor = colors[Math.floor(Math.random() * colors.length)];
+            messageElement.style.color = randomColor;
+        }
+    </script>
+
+</body>
+  </html>
